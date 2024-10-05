@@ -11,7 +11,7 @@ COPY . /app/my-app
 # RUN chmod +x mvnw
 
 # Debugging step: List files to confirm mvnw exists
-RUN ls -la /app/my-app
+RUN ls -la /my-app
 RUN ls -la app/my-app/.mvn/wrapper
 
 # Step 5: Build the project
