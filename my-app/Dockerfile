@@ -9,8 +9,7 @@ COPY . .
 
 # Step 4: Build the project
 # If you're using Maven:
-RUN ./mvnw clean package
-
+RUN ./my-app/mvnw clean package
 # If you're using Gradle:
 # RUN ./gradlew build
 
@@ -18,4 +17,4 @@ RUN ./mvnw clean package
 EXPOSE 8080
 
 # Step 6: Start your app
-CMD ["java", "-jar", "target/myapp.jar"]
+CMD ["java" "-jar" "target/my-app-1.0-SNAPSHOT.jar"]
