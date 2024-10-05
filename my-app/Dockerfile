@@ -7,14 +7,14 @@ WORKDIR /app
 # Step 3: Copy your entire project into the container
 COPY . .
 
-# Step 4: Build the project
-# If you're using Maven:
-RUN ./my-app/mvnw clean package 
-# If you're using Gradle:
-# RUN ./gradlew build
+# Step 4: Change permission for mvnw
+RUN chmod +x ./my-app/mvnw
 
-# Step 5: Tell Docker to use port 8080 (where Vaadin runs by default)
+# Step 5: Build the project
+RUN ./my-app/mvnw clean package 
+
+# Step 6: Tell Docker to use port 8080 (where Vaadin runs by default)
 EXPOSE 8080
 
-# Step 6: Start your app
+# Step 7: Start your app
 CMD ["java" "-jar" "target/my-app-1.0-SNAPSHOT.jar"]
