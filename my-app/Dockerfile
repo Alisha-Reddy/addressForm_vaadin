@@ -11,11 +11,11 @@ COPY . /app/my-app
 # RUN chmod +x mvnw
 
 # Debugging step: List files to confirm mvnw exists
-RUN ls -la /my-app
+RUN ls -la /app/my-app
 RUN ls -la app/my-app/.mvn/wrapper
 
 # Step 5: Build the project
-RUN ./my-app/mvnw clean package 
+RUN /mvnw clean package 
  
 # Step 6: Tell Docker to use port 8080 (where Vaadin runs by default)
 EXPOSE 8080
