@@ -5,7 +5,7 @@ FROM openjdk:17-jdk-slim
 WORKDIR /app
 
 # Step 3: Copy your entire project into the container
-COPY . /app/my-app
+COPY ..
 
 # Step 4: Change permission for mvnw
 # RUN chmod +x mvnw
