@@ -11,7 +11,7 @@ COPY . .
 # RUN chmod +x mvnw
 
 # Debugging step: List files to confirm mvnw exists
-RUN cd /app/my-app/my-app
+# RUN cd /app/my-app/my-app
 RUN ls -la
 # RUN ls -la /app/my-app/.mvn
 
