@@ -12,7 +12,7 @@ COPY . /app/my-app
 
 # Debugging step: List files to confirm mvnw exists
 RUN ls -la /app/my-app
-RUN ls -la /app/my-app/.mvn/wrapper
+RUN ls -la /app/my-app/.mvn
 
 # Step 5: Build the project
 RUN /mvnw clean package 
