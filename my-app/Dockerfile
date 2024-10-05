@@ -9,7 +9,7 @@ COPY . .
 
 # Step 4: Build the project
 # If you're using Maven:
-RUN ./my-app/mvnw clean package
+RUN ./my-app/mvnw clean package 
 # If you're using Gradle:
 # RUN ./gradlew build
 
