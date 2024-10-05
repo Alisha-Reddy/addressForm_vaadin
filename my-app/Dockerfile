@@ -8,7 +8,7 @@ WORKDIR /app/my-app
 COPY . .
 
 # Step 4: Change permission for mvnw
-RUN chmod +x ./mvnw
+RUN chmod +x mvnw
 
 # Step 5: Build the project
 RUN ./mvnw clean package 
