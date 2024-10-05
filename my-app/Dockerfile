@@ -2,19 +2,19 @@
 FROM openjdk:17-jdk-slim
 
 # Step 2: Set the working directory inside the container
-WORKDIR /app
+WORKDIR /app/my-app
 
 # Step 3: Copy your entire project into the container
 COPY . .
 
 # Step 4: Change permission for mvnw
-RUN chmod +x ./my-app/mvnw
+RUN chmod +x ./mvnw
 
 # Step 5: Build the project
-RUN ./my-app/mvnw clean package 
+RUN ./mvnw clean package 
  
 # Step 6: Tell Docker to use port 8080 (where Vaadin runs by default)
 EXPOSE 8080
 
 # Step 7: Start your app
-CMD ["java" "-jar" "target/my-app-1.0-SNAPSHOT.jar"]
+CMD ["java","-jar","target/my-app-1.0-SNAPSHOT.jar"]
