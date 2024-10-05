@@ -8,10 +8,10 @@ WORKDIR /app/my-app
 COPY . .
 
 # Step 4: Change permission for mvnw
-RUN chmod +x mvnw
+# RUN chmod +x mvnw
 
 # Debugging step: List files to confirm mvnw exists
-RUN ls -la /app/my-app
+# RUN ls -la /app/my-app
 
 # Step 5: Build the project
 RUN ./mvnw clean package 
