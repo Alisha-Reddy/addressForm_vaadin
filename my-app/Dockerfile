@@ -2,7 +2,7 @@
 FROM openjdk:17-jdk-slim
 
 # Step 2: Set the working directory inside the container
-WORKDIR /app/my-app
+WORKDIR /app
 
 # Step 3: Copy your entire project into the container
 COPY . /app/my-app
@@ -11,7 +11,7 @@ COPY . /app/my-app
 # RUN chmod +x mvnw
 
 # Debugging step: List files to confirm mvnw exists
-RUN ls -la /app/my-app/my-app
+RUN ls -la /app/my-app
 # RUN ls -la /app/my-app/.mvn
 
 # Step 5: Build the project
