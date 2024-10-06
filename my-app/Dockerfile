@@ -2,7 +2,7 @@
 FROM openjdk:17-jdk-slim
 
 # Step 2: Set the working directory inside the container
-WORKDIR /my-app
+WORKDIR ./my-app
 
 # Step 3: Copy your entire project into the container
 COPY . .
