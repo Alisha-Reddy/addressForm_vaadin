@@ -12,7 +12,8 @@ COPY . .
 
 # Debugging step: List files to confirm mvnw exists
 # RUN cd /app/my-app/my-app
-RUN ls -la my-app/
+cd my-app/
+RUN ls -la 
 # RUN ls -la /app/my-app/.mvn
 
 # Step 5: Build the project
