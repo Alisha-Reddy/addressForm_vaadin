@@ -1,5 +1,5 @@
 # Step 1: Use Java 17 as the base (most Vaadin projects use Java 17)
-FROM openjdk:17-jdk-slim
+FROM openjdk:21-jdk-slim
 
 # Step 2: Set the working directory inside the container
 WORKDIR /my-app/my-app
