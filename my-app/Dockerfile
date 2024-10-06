@@ -2,7 +2,7 @@
 FROM openjdk:17-jdk-slim
 
 # Step 2: Set the working directory inside the container
-WORKDIR /app
+WORKDIR /my-app
 
 # Step 3: Copy your entire project into the container
 COPY . .
@@ -12,8 +12,9 @@ COPY . .
 
 # Debugging step: List files to confirm mvnw exists
 # RUN cd /app/my-app/my-app
+RUN ls -la
 RUN ls -la my-app/
-RUN cd /app/my-app 
+# RUN cd /app/my-app 
 # RUN ls -la /app/my-app/.mvn
 
 # Step 5: Build the project
