@@ -5,7 +5,7 @@ FROM openjdk:17-jdk-slim
 WORKDIR /app
 
 # Step 3: Copy your entire project into the container
-COPY my-app/. /app/my-app/
+COPY . .
 
 # Step 4: Change permission for mvnw
 # RUN chmod +x mvnw
@@ -13,10 +13,11 @@ COPY my-app/. /app/my-app/
 # Debugging step: List files to confirm mvnw exists
 # RUN cd /app/my-app/my-app
 RUN ls -la my-app/
+RUN cd /app/my-app 
 # RUN ls -la /app/my-app/.mvn
 
 # Step 5: Build the project
-RUN ./my-app/mvnw clean package 
+RUN ./mvnw clean package 
  
 # Step 6: Tell Docker to use port 8080 (where Vaadin runs by default)
 EXPOSE 8080
